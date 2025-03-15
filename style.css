@@ -1,0 +1,735 @@
+/* General Reset and Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f3b42;
+    /* Dark background color */
+    color: #ffffff;
+    /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Side Menu Styles (For Mobile View) */
+.sideMenu {
+    height: 100%;
+    width: 0;
+    /* Start with 0 width, hidden by default */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #1e272e;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    display: none;
+}
+
+/* Side Menu links */
+.sideMenu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ccc;
+    display: block;
+    transition: 0.3s;
+}
+
+.sideMenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #ccc;
+}
+
+/* Hamburger Icon for Mobile */
+.hamburger-icon {
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    /* Display hamburger icon on mobile */
+}
+
+/* Logo next to Hamburger Icon on Mobile */
+.mobile-logo {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 2px;
+    right: 20px; /* Align logo next to hamburger icon on mobile */
+    z-index: 9999;
+}
+
+.mobile-logo img {
+    width: 100px; /* Adjust the logo size here (larger size) */
+    height: auto;
+}
+
+/* Logo on the Homepage (Only for Mobile) */
+.home-logo {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Align logo to the right */
+    z-index: 9999;
+}
+
+.home-logo img {
+    width: 120px; /* Increase size of the logo on the homepage */
+    height: auto;
+}
+/* Navbar Section */
+nav {
+    background-color: #212f3d;
+    /* Dark background for navbar */
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ddd;
+    /* Light grey text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    /* Change color to white on hover */
+}
+
+/* Logo on the Homepage (Only for Mobile) */
+.home-logo {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Align logo to the right */
+    z-index: 9999;
+   
+}
+
+.home-logo img {
+    width: 80px; /* Adjust size of the logo on the homepage */
+    height: auto;
+   
+}
+
+/* Content Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h1,
+section h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: #bbb;
+    /* Light grey text */
+    font-size: 18px;
+}
+
+/* Home Video Styling */
+video {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+* Gallery Section */
+#gallery {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Video Cards Styling */
+.gallery-item.video-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px;  /* Set a fixed height for the video container */
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;  /* Make the video fill the container */
+    object-fit: cover;  /* Ensure it covers the container properly */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect for Images and Videos */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Services Section Styles */
+#services {
+    background-color: #3a4d63;
+    /* Dark blue-gray background for services */
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #4b6273;
+    /* Dark background for service cards */
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Added more transitions */
+}
+
+.service-card:hover {
+    background-color: #5c7585;
+    /* Slightly lighter background on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    /* Lift effect on hover */
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #ddd;
+    /* Light grey text for descriptions */
+    font-size: 16px;
+}
+
+
+
+/* About Us Section Styles */
+#about-us {
+    background-color: #212f3d;
+    color: #ddd;
+    padding: 60px 20px;
+}
+
+/* Container for About Us and Team's Photos */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* About Content Styling */
+.about-content {
+    flex: 1;
+    padding: 20px;
+    margin-right: 20px;
+    max-width: 50%;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Team's Photo Box Styling */
+.team-photo-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between the photo boxes */
+    flex: 1;
+    max-width: 50%;
+}
+
+.owner-photo-box,
+.developer-photo-box {
+    flex: 1;
+    max-width: 48%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.owner-photo-box:hover,
+.developer-photo-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.owner-photo,
+.developer-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.owner-info,
+.developer-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owner-info h3,
+.developer-info h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.owner-info p,
+.developer-info p {
+    color: #ddd;
+    font-size: 16px;
+}
+
+/* Booking Section Styles */
+#booking {
+    background-color: #2c3e50;
+    /* Dark blue background for booking section */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form select,
+form textarea {
+    padding: 10px;
+    background-color: #34495e;
+    /* Dark background for input fields */
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #5d6d7e;
+    /* Dark button background */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #4b5c69;
+    /* Slightly darker on hover */
+}
+
+form input::placeholder {
+    color: white;
+}
+
+
+/* Contact Us Section Styles */
+#contact-us {
+    display: flex;
+    justify-content: space-between;
+    background-color: #34495e;
+    /* Dark gray background */
+    padding: 30px;
+    flex-wrap: wrap;
+    /* Allows wrapping on small screens */
+}
+
+#contact-us h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    width: 100%;
+    /* Ensures h2 takes the full width */
+}
+
+#contact-us p {
+    color: #ddd;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Align contact details to the left */
+#contact-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    /* Align the contact details to the left */
+}
+
+#contact-us ul li {
+    color: #ddd;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    flex: 1;
+    margin-left: auto;
+    /* Aligns form to the right */
+}
+
+/* Social Media Icons */
+#contact-us .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#contact-us .social-icons a {
+    color: #ddd;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-us .social-icons a:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Input Container for Floating Labels */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container textarea {
+    padding: 10px;
+    background-color: #34495e;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+/* Label Styling */
+.input-container label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #bbb;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Prevent label from interfering with input */
+}
+
+/* Floating Label on Focus or When Text is Entered */
+.input-container input:focus+label,
+.input-container textarea:focus+label,
+.input-container input:not(:placeholder-shown)+label,
+.input-container textarea:not(:placeholder-shown)+label {
+    top: -20px;
+    color: #fff;
+    font-size: 12px;
+}
+
+/* Make Placeholder Invisible */
+.input-container input::placeholder,
+.input-container textarea::placeholder {
+    color: #bbb;
+    /* Visible placeholder text color */
+}
+
+/* Hide Placeholder When Focused */
+.input-container input:focus::placeholder,
+.input-container textarea:focus::placeholder {
+    opacity: 0;
+}
+
+/* Submit Button */
+#contact-us form input[type="submit"] {
+    background-color: #5d6d7e;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-us form input[type="submit"]:hover {
+    background-color: #4b5c69;
+    /* Darker on hover */
+}
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+        /* Show the hamburger icon on mobile */
+    }
+
+    nav {
+        display: none;
+        /* Hide the regular navbar on mobile */
+    }
+
+    .sideMenu {
+        display: block;
+        /* Show the side menu on mobile */
+        width: 250px;
+    }
+
+    .sideMenu a {
+        font-size: 22px;
+        /* Adjust link font size for mobile */
+    }
+
+    /* Show the mobile logo next to the hamburger icon */
+    .mobile-logo {
+        display: block;
+        border-radius: 50%;
+    }
+
+    /* Show the logo on the homepage for mobile */
+    .home-logo {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-icon {
+        display: none;
+        /* Hide the hamburger icon on larger screens */
+    }
+
+    nav {
+        display: block;
+        /* Show the regular navbar on larger screens */
+    }
+
+    .sideMenu {
+        display: none;
+        /* Hide the side menu on larger screens */
+    }
+
+    .sideMenu-logo {
+        display: none;
+        /* Hide the logo inside the side menu on larger screens */
+    }
+
+    .home-logo {
+        display: none;
+        /* Hide the logo on homepage for larger screens */
+    }
+}
+@media screen and (max-width: 480px) {
+    #home h1 {
+        font-size: 2rem;  /* Further reduce heading size */
+        margin-bottom: 15px;
+    }
+
+    #home p {
+        font-size: 1rem;  /* Adjust paragraph size for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    #home video {
+        width: 100%;
+        height: 250px;  /* Reduce video height for small screens */
+        object-fit: cover;  /* Maintain the aspect ratio */
+    }
+}
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content,
+    .team-photo-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .owner-photo,
+    .developer-photo {
+        width: 120px;
+        height: 150px;
+        margin-right: 20px;
+        border-radius: 47%;
+    }
+
+    .owner-photo-box,
+    .developer-photo-box {
+        max-width: 100%;
+    }
+}
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    #gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+    }
+
+    /* Ensure video takes up the full width but is not too large */
+    .gallery-item.video-card {
+        height: 200px;  /* Adjusted height for videos on smaller screens */
+    }
+
+    .gallery-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    #contact-us {
+        flex-direction: column;
+        /* Stack the content on smaller screens */
+        align-items: center;
+    }
+
+    #contact-us ul,
+    #contact-us form {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #contact-us form {
+        margin-left: 0;
+        /* Remove right alignment on smaller screens */
+        width: 95%;
+        /* Set form width to 95% of the screen */
+    }
+}
+
+/* Small Screen (Mobile) Adjustments */
+@media (max-width: 480px) {
+    #contact-us ul li {
+        font-size: 16px;
+        /* Smaller text on mobile */
+    }
+
+    #contact-us form input,
+    #contact-us form textarea {
+        font-size: 14px;
+        /* Smaller form fields */
+    }
+
+    #contact-us form input[type="submit"] {
+        font-size: 14px;
+        /* Smaller button on mobile */
+    }
+
+    #contact-us form {
+        width: 95%;
+        /* Set form width to 95% of the screen */
+    }
+}
