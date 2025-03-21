@@ -57,6 +57,7 @@ body {
     padding: 10px;
     display: block;
     position: fixed;
+    margin-bottom: 100px;
     /* Display hamburger icon on mobile */
 }
 
